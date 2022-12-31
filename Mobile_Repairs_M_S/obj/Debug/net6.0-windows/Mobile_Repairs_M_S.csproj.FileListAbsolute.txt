@@ -20,3 +20,5 @@ C:\Users\IT\Desktop\widows\Mobile_Rebairs_M_S\Mobile_Rebairs_M_S\Mobile_Repairs_
 C:\Users\IT\Desktop\widows\Mobile_Rebairs_M_S\Mobile_Rebairs_M_S\Mobile_Repairs_M_S\Mobile_Repairs_M_S\obj\Debug\net6.0-windows\ref\Mobile_Repairs_M_S.dll
 C:\Users\IT\Desktop\widows\Mobile_Rebairs_M_S\Mobile_Rebairs_M_S\Mobile_Repairs_M_S\Mobile_Repairs_M_S\obj\Debug\net6.0-windows\Mobile_Repairs_M_S.Properties.Resources.resources
 C:\Users\IT\Desktop\widows\Mobile_Rebairs_M_S\Mobile_Rebairs_M_S\Mobile_Repairs_M_S\Mobile_Repairs_M_S\obj\Debug\net6.0-windows\Mobile_Repairs_M_S.Customers.resources
+C:\Users\IT\Desktop\widows\Mobile_Rebairs_M_S\Mobile_Rebairs_M_S\Mobile_Repairs_M_S\Mobile_Repairs_M_S\obj\Debug\net6.0-windows\Mobile_Repairs_M_S.Repairs.resources
+C:\Users\IT\Desktop\widows\Mobile_Rebairs_M_S\Mobile_Rebairs_M_S\Mobile_Repairs_M_S\Mobile_Repairs_M_S\obj\Debug\net6.0-windows\Mobile_Repairs_M_S.Spares.resources
