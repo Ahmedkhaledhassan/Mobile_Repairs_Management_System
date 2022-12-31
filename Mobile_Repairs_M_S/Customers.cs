@@ -37,6 +37,7 @@ namespace Mobile_Repairs_M_S
                     Con.SetData(Query);
                     MessageBox.Show("Customer Added!!!");
                     ShowCustomers();
+                    Clear();
                 }catch(Exception Ex)
                 {
                     MessageBox.Show(Ex.Message);
@@ -85,6 +86,7 @@ namespace Mobile_Repairs_M_S
                     Con.SetData(Query);
                     MessageBox.Show("Customer Updated!!!");
                     ShowCustomers();
+                    Clear();
                 }
                 catch (Exception Ex)
                 {
@@ -92,7 +94,13 @@ namespace Mobile_Repairs_M_S
                 }
             }
         }
-
+        private void Clear()
+        {
+            CustNameTb.Text = "";
+            CustPhoneTb.Text = "";
+            CustAddTb.Text = "";
+            key = 0;
+        }
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
             if (key == 0)
@@ -110,6 +118,7 @@ namespace Mobile_Repairs_M_S
                     Con.SetData(Query);
                     MessageBox.Show("Customer Deleted !!!");
                     ShowCustomers();
+                    Clear();
                 }
                 catch (Exception Ex)
                 {
