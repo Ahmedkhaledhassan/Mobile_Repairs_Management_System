@@ -1,8 +1,8 @@
 namespace Mobile_Repairs_M_S
 {
-    public partial class Form1 : Form
+    public partial class Customers : Form
     {
-        public Form1()
+        public Customers()
         {
             InitializeComponent();
         }
