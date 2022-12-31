@@ -9,7 +9,6 @@ namespace Mobile_Repairs_M_S
             InitializeComponent();
            
         }
-       
         private void SaveBtn_Click(object sender, EventArgs e)
         {
            
