@@ -105,6 +105,7 @@
             this.CustNameTb.Name = "CustNameTb";
             this.CustNameTb.Size = new System.Drawing.Size(160, 23);
             this.CustNameTb.TabIndex = 3;
+            this.CustNameTb.TextChanged += new System.EventHandler(this.CustNameTb_TextChanged);
             // 
             // CustPhoneTb
             // 
@@ -165,6 +166,7 @@
             this.UpdateBtn.TabIndex = 9;
             this.UpdateBtn.Text = "Update";
             this.UpdateBtn.UseVisualStyleBackColor = false;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // DeleteBtn
             // 
@@ -178,6 +180,7 @@
             this.DeleteBtn.TabIndex = 10;
             this.DeleteBtn.Text = "Delete";
             this.DeleteBtn.UseVisualStyleBackColor = false;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // panel2
             // 

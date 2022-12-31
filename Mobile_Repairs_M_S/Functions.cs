@@ -26,6 +26,7 @@ namespace Mobile_Repairs_M_S
         {
             dt = new DataTable();
             sda = new SqlDataAdapter(Query , ConStr);
+
             sda.Fill(dt);
             return dt;
         }
@@ -38,6 +39,7 @@ namespace Mobile_Repairs_M_S
             }
             Cmd.CommandText = Query;
             Cnt = Cmd.ExecuteNonQuery();
+            Con.Close();
             return Cnt;
         }
     }
