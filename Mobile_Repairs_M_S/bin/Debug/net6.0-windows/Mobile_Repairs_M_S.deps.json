@@ -6,6 +6,14 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
+      "Mobile_Repairs_M_S/1.0.0": {
+        "dependencies": {
+          "Guna.UI2.WinForms": "2.0.3.9"
+        },
+        "runtime": {
+          "Mobile_Repairs_M_S.dll": {}
+        }
+      },
       "Guna.UI2.WinForms/2.0.3.9": {
         "dependencies": {
           "System.Management": "6.0.0"
@@ -17,14 +25,7 @@
           }
         }
       },
-      "System.CodeDom/6.0.0": {
-        "runtime": {
-          "lib/net6.0/System.CodeDom.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
-          }
-        }
-      },
+      "System.CodeDom/6.0.0": {},
       "System.Management/6.0.0": {
         "dependencies": {
           "System.CodeDom": "6.0.0"
@@ -47,6 +48,11 @@
     }
   },
   "libraries": {
+    "Mobile_Repairs_M_S/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Guna.UI2.WinForms/2.0.3.9": {
       "type": "package",
       "serviceable": true,
