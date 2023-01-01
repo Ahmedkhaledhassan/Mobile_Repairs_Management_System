@@ -18,6 +18,19 @@ namespace Mobile_Repairs_M_S
             InitializeComponent();
             Con = new Functions();
             ShowRepairs();
+            GetCustomer();
+        }
+        private void GetCustomer()
+        {
+            try
+            {
+                string Query = "Select * from CustomerTb1";
+                CustCb.DisplayMember = Con.GetData(Query).Columns["CustName"].ToString();
+                CustCb.ValueMember = Con.GetData(Query).Columns["CustCode"].ToString();
+                CustCb.DataSource = Con.GetData(Query);
+            }
+            catch { }
+           
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

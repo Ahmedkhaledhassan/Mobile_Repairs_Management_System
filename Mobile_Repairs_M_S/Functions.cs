@@ -15,7 +15,7 @@ namespace Mobile_Repairs_M_S
         private DataTable dt;
         private SqlDataAdapter sda;
         private string ConStr;
-        public Functions()
+        public Functions ()
         {
             try {
                 ConStr = @"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\IT\\Documents\\Ahmed_Khaled_Mobile_Repairs_Db.mdf;Integrated Security=True;Connect Timeout=30";
