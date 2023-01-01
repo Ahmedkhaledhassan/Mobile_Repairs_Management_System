@@ -75,6 +75,7 @@
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 15;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // panel3
             // 
@@ -104,6 +105,7 @@
             this.DeleteBtn.TabIndex = 24;
             this.DeleteBtn.Text = "Delete";
             this.DeleteBtn.UseVisualStyleBackColor = false;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // UpdateBtn
             // 
@@ -246,6 +248,7 @@
             this.Controls.Add(this.PartNameTb);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Spares";
             this.Text = "Spares";
             this.panel1.ResumeLayout(false);

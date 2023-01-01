@@ -17,10 +17,17 @@ namespace Mobile_Repairs_M_S
         private string ConStr;
         public Functions()
         {
-            ConStr = @"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\IT\\Documents\\Ahmed_Khaled_Mobile_Repairs_Db.mdf;Integrated Security=True;Connect Timeout=30";
-            Con = new SqlConnection(ConStr);
-            Cmd = new SqlCommand();
-            Cmd.Connection = Con;
+            try {
+                ConStr = @"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\IT\\Documents\\Ahmed_Khaled_Mobile_Repairs_Db.mdf;Integrated Security=True;Connect Timeout=30";
+                Con = new SqlConnection(ConStr);
+                Cmd = new SqlCommand();
+                Cmd.Connection = Con;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
         }
         public DataTable GetData(string Query)
         {
@@ -30,7 +37,7 @@ namespace Mobile_Repairs_M_S
                 sda = new SqlDataAdapter(Query, ConStr);
                 sda.Fill(dt);
             }
-            catch {}
+            catch{ }
             return dt;
         }
         public int SetData(string Query)
@@ -42,7 +49,7 @@ namespace Mobile_Repairs_M_S
             }
             Cmd.CommandText = Query;
             Cnt = Cmd.ExecuteNonQuery();
-           
+
             return Cnt;
         }
     }
