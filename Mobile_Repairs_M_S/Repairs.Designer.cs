@@ -30,8 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Repairs));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -48,7 +51,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.RepDateTb = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.CustCd = new System.Windows.Forms.ComboBox();
+            this.CustCb = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.ModelTb = new System.Windows.Forms.TextBox();
@@ -59,8 +62,10 @@
             this.SpareCostTb = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.TotalTb = new System.Windows.Forms.TextBox();
+            this.RepairsList = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RepairsList)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -142,6 +147,7 @@
             this.SaveBtn.TabIndex = 22;
             this.SaveBtn.Text = "save";
             this.SaveBtn.UseVisualStyleBackColor = false;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // PhoneTb
             // 
@@ -206,25 +212,25 @@
             // RepDateTb
             // 
             this.RepDateTb.Checked = true;
-            this.RepDateTb.CustomizableEdges = customizableEdges1;
+            this.RepDateTb.CustomizableEdges = customizableEdges3;
             this.RepDateTb.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.RepDateTb.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.RepDateTb.Location = new System.Drawing.Point(89, 78);
             this.RepDateTb.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.RepDateTb.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.RepDateTb.Name = "RepDateTb";
-            this.RepDateTb.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            this.RepDateTb.ShadowDecoration.CustomizableEdges = customizableEdges4;
             this.RepDateTb.Size = new System.Drawing.Size(200, 36);
             this.RepDateTb.TabIndex = 28;
             this.RepDateTb.Value = new System.DateTime(2022, 12, 31, 7, 55, 53, 684);
             // 
-            // CustCd
+            // CustCb
             // 
-            this.CustCd.FormattingEnabled = true;
-            this.CustCd.Location = new System.Drawing.Point(89, 144);
-            this.CustCd.Name = "CustCd";
-            this.CustCd.Size = new System.Drawing.Size(160, 23);
-            this.CustCd.TabIndex = 29;
+            this.CustCb.FormattingEnabled = true;
+            this.CustCb.Location = new System.Drawing.Point(89, 144);
+            this.CustCb.Name = "CustCb";
+            this.CustCb.Size = new System.Drawing.Size(160, 23);
+            this.CustCb.TabIndex = 29;
             // 
             // label5
             // 
@@ -309,12 +315,64 @@
             this.TotalTb.Size = new System.Drawing.Size(76, 23);
             this.TotalTb.TabIndex = 38;
             // 
+            // RepairsList
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.RepairsList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RepairsList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.RepairsList.ColumnHeadersHeight = 4;
+            this.RepairsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.RepairsList.DefaultCellStyle = dataGridViewCellStyle6;
+            this.RepairsList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.RepairsList.Location = new System.Drawing.Point(346, 60);
+            this.RepairsList.Name = "RepairsList";
+            this.RepairsList.RowHeadersVisible = false;
+            this.RepairsList.RowTemplate.Height = 25;
+            this.RepairsList.Size = new System.Drawing.Size(604, 484);
+            this.RepairsList.TabIndex = 40;
+            this.RepairsList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.RepairsList.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.RepairsList.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.RepairsList.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.RepairsList.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.RepairsList.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.RepairsList.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.RepairsList.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.RepairsList.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.RepairsList.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RepairsList.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.RepairsList.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.RepairsList.ThemeStyle.HeaderStyle.Height = 4;
+            this.RepairsList.ThemeStyle.ReadOnly = false;
+            this.RepairsList.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.RepairsList.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.RepairsList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RepairsList.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.RepairsList.ThemeStyle.RowsStyle.Height = 25;
+            this.RepairsList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.RepairsList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
             // Repairs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(963, 597);
+            this.Controls.Add(this.RepairsList);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.TotalTb);
             this.Controls.Add(this.label9);
@@ -325,7 +383,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ModelTb);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.CustCd);
+            this.Controls.Add(this.CustCb);
             this.Controls.Add(this.RepDateTb);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
@@ -346,6 +404,7 @@
             this.Text = "Repairs";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RepairsList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,6 +438,7 @@
         private Label label6;
         private TextBox ModelTb;
         private Label label5;
-        private ComboBox CustCd;
+        private ComboBox CustCb;
+        private Guna.UI2.WinForms.Guna2DataGridView RepairsList;
     }
 }
