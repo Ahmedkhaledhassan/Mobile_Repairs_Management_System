@@ -24,10 +24,13 @@ namespace Mobile_Repairs_M_S
         }
         public DataTable GetData(string Query)
         {
-            dt = new DataTable();
-            sda = new SqlDataAdapter(Query , ConStr);
-
-            sda.Fill(dt);
+            try
+            {
+                dt = new DataTable();
+                sda = new SqlDataAdapter(Query, ConStr);
+                sda.Fill(dt);
+            }
+            catch {}
             return dt;
         }
         public int SetData(string Query)
@@ -39,7 +42,7 @@ namespace Mobile_Repairs_M_S
             }
             Cmd.CommandText = Query;
             Cnt = Cmd.ExecuteNonQuery();
-            Con.Close();
+           
             return Cnt;
         }
     }
